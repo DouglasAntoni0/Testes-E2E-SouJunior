@@ -13,15 +13,12 @@ describe('Papeis na SouJunior - Validação da Seção da Comunidade', () => {
         cy.contains('p', 'Na SouJunior, há diversas maneiras de participar:')
             .should('be.visible');
 
-        // Bloco Júnior
         cy.contains('p', 'Júnior').should('be.visible');
         cy.contains('p', 'Júnior executa tarefas do projeto enquanto aprende na prática e desenvolve habilidades, sempre sob orientação de mentores e heads').should('be.visible');
 
-        // Bloco Mentor
         cy.contains('p', 'Mentor').should('be.visible');
         cy.contains('p', 'Mentor orienta, tira dúvidas e apoia o crescimento dos juniores dentro de cada área de atuação.').should('be.visible');
 
-        // Bloco Head
         cy.contains('p', 'Head').should('be.visible');
         cy.contains('p', 'Head organiza e lidera equipes, toma decisões e garante que tudo funcione bem dentro do projeto.').should('be.visible');
     });

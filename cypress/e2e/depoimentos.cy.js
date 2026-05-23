@@ -4,21 +4,17 @@ describe('Seção de Depoimentos', () => {
     cy.visit('http://localhost:3000');
   });
 
-  // Função auxiliar para validar a integridade estrutural e de dados de um card
   const validarCard = (dados) => {
     cy.get('#depoimentos').contains('p', dados.nome).parent().parent().within(() => {
-      // Valida textos principais
       cy.contains('p', dados.nome).should('be.visible');
       cy.contains('p', dados.cargo).should('be.visible');
 
-      // Valida carregamento real da imagem (largura > 0)
       cy.get(`img[alt="${dados.fotoAlt}"]`)
         .should('be.visible')
         .and(($img) => {
           expect($img[0].naturalWidth).to.be.greaterThan(0);
         });
 
-      // Valida trechos do depoimento para garantir integridade do conteúdo sem quebrar por formatação
       cy.get('article p')
         .should('be.visible')
         .invoke('text')
@@ -34,7 +30,6 @@ describe('Seção de Depoimentos', () => {
 
   it('Deve validar a integridade de todos os dados nos cards e a transição de páginas', () => {
 
-    // Massa de dados esperada por página
     const pagina1 = [
       { nome: 'Priscilla Souza', cargo: 'UI & UX Designer', fotoAlt: 'Priscilla Souza', inicioTexto: 'Oi, sou a Priscila', fimTexto: 'trocar muitas experiências.' },
       { nome: 'Anderson Nunes', cargo: 'Front-end', fotoAlt: 'Anderson Nunes', inicioTexto: 'Fui voluntário na Sou Junior', fimTexto: 'meu "sim" chegou.' },
@@ -52,7 +47,6 @@ describe('Seção de Depoimentos', () => {
       { nome: 'Eduardo Bezerra', cargo: 'UI & UX Designer', fotoAlt: 'Eduardo Bezerra', inicioTexto: 'É uma honra poder', fimTexto: 'graças a Sou Junior.' }
     ];
 
-    // Validação sequencial das páginas navegando pelo carrossel
     pagina1.forEach(validarCard);
 
     cy.get('#depoimentos button[aria-label="Ver próximo item"]').click();
@@ -61,7 +55,6 @@ describe('Seção de Depoimentos', () => {
     cy.get('#depoimentos button[aria-label="Ver próximo item"]').click();
     pagina3.forEach(validarCard);
 
-    // Valida retorno para a página anterior
     cy.get('#depoimentos button[aria-label="Ver item anterior"]').click();
     cy.get('#depoimentos').contains('p', 'Ana Santos').should('be.visible');
   });
@@ -69,18 +62,16 @@ describe('Seção de Depoimentos', () => {
   it('Deve validar o estado habilitado/desabilitado das setas através de navegação automatizada', () => {
     cy.get('#depoimentos').within(() => {
 
-      // Estado inicial do carrossel
       cy.get('button[aria-label="Ver item anterior"]').should('be.disabled');
       cy.get('button[aria-label="Ver próximo item"]').should('not.be.disabled');
 
-      // Função recursiva para esgotar os cliques até bater no limite do carrossel
       const clicarAteOFinal = () => {
         cy.get('button[aria-label="Ver próximo item"]').then(($btn) => {
           if ($btn.is(':disabled')) {
-            return; // Limite alcançado, interrompe a recursividade
+            return;
           } else {
             cy.wrap($btn).click();
-            cy.wait(800); // Pausa estratégica para sincronizar com a animação CSS de rolagem
+            cy.wait(800); // Aguarda a animação de rolagem do carrossel
             clicarAteOFinal();
           }
         });
@@ -88,7 +79,6 @@ describe('Seção de Depoimentos', () => {
 
       clicarAteOFinal();
 
-      // Estado final do carrossel
       cy.get('button[aria-label="Ver próximo item"]').should('be.disabled');
       cy.get('button[aria-label="Ver item anterior"]').should('not.be.disabled');
     });

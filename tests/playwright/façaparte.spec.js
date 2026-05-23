@@ -15,15 +15,12 @@ test.describe('Papeis na SouJunior - Validação da Seção da Comunidade', () =
         const subtitulo = page.getByText('Na SouJunior, há diversas maneiras de participar:');
         await expect(subtitulo).toBeVisible();
 
-        // 2. Bloco Júnior
         await expect(page.getByText('Júnior', { exact: true })).toBeVisible();
         await expect(page.getByText('Júnior executa tarefas do projeto enquanto aprende na prática e desenvolve habilidades, sempre sob orientação de mentores e heads')).toBeVisible();
 
-        // 3. Bloco Mentor
         await expect(page.getByText('Mentor', { exact: true })).toBeVisible();
         await expect(page.getByText('Mentor orienta, tira dúvidas e apoia o crescimento dos juniores dentro de cada área de atuação.')).toBeVisible();
 
-        // 4. Bloco Head
         await expect(page.getByText('Head', { exact: true })).toBeVisible();
         await expect(page.getByText('Head organiza e lidera equipes, toma decisões e garante que tudo funcione bem dentro do projeto.')).toBeVisible();
     });

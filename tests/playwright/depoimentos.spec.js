@@ -6,22 +6,17 @@ test.describe('Seção de Depoimentos', () => {
     await page.goto('http://localhost:3000');
   });
 
-  // Função auxiliar para validar a integridade estrutural e de dados de um card
   const validarCard = async (page, dados) => {
-    // Localiza o texto do nome e sobe dois níveis ('..') para pegar o container pai do card
     const card = page.locator('#depoimentos').locator(`p:has-text("${dados.nome}")`).locator('..').locator('..');
 
-    // Valida textos principais (CORRIGIDO: Busca Exata para evitar Strict Mode Violation)
     await expect(card.getByText(dados.nome, { exact: true }).first()).toBeVisible();
     await expect(card.getByText(dados.cargo, { exact: true }).first()).toBeVisible();
 
-    // Valida carregamento real da imagem (largura > 0)
     const img = card.locator(`img[alt="${dados.fotoAlt}"]`);
     await expect(img).toBeVisible();
     const naturalWidth = await img.evaluate((node) => node.naturalWidth);
     expect(naturalWidth).toBeGreaterThan(0);
 
-    // Valida trechos do depoimento
     const article = card.locator('article p');
     await expect(article).toBeVisible();
     const articleText = await article.textContent();
@@ -36,7 +31,6 @@ test.describe('Seção de Depoimentos', () => {
 
   test('Deve validar a integridade de todos os dados nos cards e a transição de páginas', async ({ page }) => {
 
-    // Massa de dados esperada por página
     const pagina1 = [
       { nome: 'Priscilla Souza', cargo: 'UI & UX Designer', fotoAlt: 'Priscilla Souza', inicioTexto: 'Oi, sou a Priscila', fimTexto: 'trocar muitas experiências.' },
       { nome: 'Anderson Nunes', cargo: 'Front-end', fotoAlt: 'Anderson Nunes', inicioTexto: 'Fui voluntário na Sou Junior', fimTexto: 'meu "sim" chegou.' },
@@ -54,7 +48,6 @@ test.describe('Seção de Depoimentos', () => {
       { nome: 'Eduardo Bezerra', cargo: 'UI & UX Designer', fotoAlt: 'Eduardo Bezerra', inicioTexto: 'É uma honra poder', fimTexto: 'graças a Sou Junior.' }
     ];
 
-    // No Playwright usamos o for...of para respeitar a execução assíncrona (await)
     for (const pessoa of pagina1) {
       await validarCard(page, pessoa);
     }
@@ -69,7 +62,6 @@ test.describe('Seção de Depoimentos', () => {
       await validarCard(page, pessoa);
     }
 
-    // Valida retorno para a página anterior
     await page.locator('#depoimentos button[aria-label="Ver item anterior"]').click();
     await expect(page.locator('#depoimentos').locator('p:has-text("Ana Santos")').first()).toBeVisible();
   });
@@ -78,17 +70,14 @@ test.describe('Seção de Depoimentos', () => {
     const btnPrev = page.locator('#depoimentos button[aria-label="Ver item anterior"]');
     const btnNext = page.locator('#depoimentos button[aria-label="Ver próximo item"]');
 
-    // Estado inicial do carrossel
     await expect(btnPrev).toBeDisabled();
     await expect(btnNext).toBeEnabled();
 
-    // Loop simples do Playwright para navegar até bater no limite do carrossel
     while (await btnNext.isEnabled()) {
       await btnNext.click();
-      await page.waitForTimeout(800); // Pausa estratégica para sincronizar com a animação CSS de rolagem
+      await page.waitForTimeout(800); // Aguarda a animação de rolagem do carrossel
     }
 
-    // Estado final do carrossel
     await expect(btnNext).toBeDisabled();
     await expect(btnPrev).toBeEnabled();
   });
