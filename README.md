@@ -389,14 +389,14 @@ Contribuições são bem-vindas! Se você é membro do time SouJunior, siga este
 
 ## 📄 Licença
 
-Este projeto é open-source e desenvolvido como trabalho voluntário para a comunidade [SouJunior](https://soujunior.tech).
+Este projeto é open-source e desenvolvido como trabalho voluntário para a comunidade [SouJunior](https://www.soujunior.tech/).
 
 ---
 
 <p align="center">
   <img src="https://soujunior.tech/assets/logoPrincipal-BiqxuLdz.svg" alt="SouJunior" width="80" />
   <br/>
-  <sub>Desenvolvido com ☕ e dedicação por <strong>Douglas Antoni</strong> — Voluntário SouJunior</sub>
+  <sub>Desenvolvido com ☕ e dedicação por <strong>Douglas Antonio</strong> — Voluntário SouJunior</sub>
   <br/>
   <sub>⭐ Se este projeto te ajudou, deixe uma estrela!</sub>
 </p>
