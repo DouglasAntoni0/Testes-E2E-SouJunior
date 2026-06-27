@@ -41,7 +41,7 @@ O projeto nasceu de uma iniciativa voluntária e autônoma: enxergar uma oportun
 
 Eu construí este projeto de ponta a ponta: estratégia, estrutura, escrita dos cenários, documentação, análise de bugs e organização para execução local. A ideia não foi apenas “ter testes”, mas criar uma suíte que mostra raciocínio de QA: entender risco, validar comportamento real do usuário, registrar evidências e deixar claro o que está pronto, o que falha e por quê.
 
-Para recrutadores: este repositório mostra mais do que sintaxe de Cypress ou Playwright. Ele mostra iniciativa, senso de produto, cuidado com acessibilidade, visão de manutenção e coragem de documentar problemas reais em vez de esconder falhas para deixar o relatório bonito.
+Este repositório mostra mais do que sintaxe de Cypress ou Playwright. Ele mostra iniciativa, senso de produto, cuidado com acessibilidade, visão de manutenção e coragem de documentar problemas reais em vez de esconder falhas para deixar o relatório bonito.
 
 ## Diferenciais Técnicos
 
