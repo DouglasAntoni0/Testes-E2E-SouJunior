@@ -51,7 +51,7 @@ Para recrutadores: este repositório mostra mais do que sintaxe de Cypress ou Pl
 | **Repositório desacoplado** | Testes apontam para a aplicação via URL, sem depender de imports internos do front-end |
 | **Cobertura funcional e visual** | Valida fluxo, texto, links, imagens carregadas, cores, viewport e estados de UI |
 | **Bugs como evidência** | Falhas existentes permanecem visíveis para servir como documentação executável dos problemas |
-| **Estrutura simples de evoluir** | Specs separados por seção, comandos diretos e configuração por `.env` |
+| **Estrutura simples de evoluir** | Specs por seção, Page Objects leves, dados compartilhados e configuração por `.env` |
 | **Mentalidade de produto** | Os testes priorizam impacto no usuário: navegação, responsividade, confiança visual e acessibilidade básica |
 
 ## Cobertura
@@ -110,10 +110,12 @@ qa-e2e-tests/
 │   │   ├── perguntasfrequentes.cy.js
 │   │   └── sejaumapoiador.cy.js
 │   └── support/
+│       ├── pages/                  # Page Objects leves usados pelos specs Cypress
 │       ├── commands.js
 │       └── e2e.js
 ├── tests/
 │   └── playwright/
+│       ├── pages/                  # Page Objects leves usados pelos specs Playwright
 │       ├── depoimentos.spec.js
 │       ├── façaparte.spec.js
 │       ├── iniciativas.spec.js
@@ -138,6 +140,7 @@ qa-e2e-tests/
 |---|---|
 | **Dois frameworks na mesma estratégia** | Comparar abordagens, aumentar repertório técnico e validar comportamento por motores diferentes |
 | **Specs por seção da aplicação** | Facilitar manutenção, leitura e expansão por qualquer pessoa do time |
+| **Page Objects leves** | Centralizar ações/seletores repetidos sem esconder a intenção dos cenários |
 | **Configuração via `.env`** | Trocar ambiente sem alterar código |
 | **Worker único no Playwright** | Priorizar estabilidade em uma suíte DOM-heavy |
 | **Validação de imagem real** | Evitar falso positivo de imagem presente no DOM mas quebrada no carregamento |
