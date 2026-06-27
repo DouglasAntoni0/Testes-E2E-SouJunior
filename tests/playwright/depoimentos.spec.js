@@ -75,7 +75,7 @@ test.describe('Seção de Depoimentos', () => {
 
     while (await btnNext.isEnabled()) {
       await btnNext.click();
-      await page.waitForTimeout(800); // Aguarda a animação de rolagem do carrossel
+      await page.waitForTimeout(800); // Aguarda a rolagem do carrossel estabilizar.
     }
 
     await expect(btnNext).toBeDisabled();

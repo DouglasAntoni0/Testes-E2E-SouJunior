@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Análise Técnica de QA - Seção Seja um Apoiador', () => {
+test.describe('Seção Seja um Apoiador', () => {
 
     test.beforeEach(async ({ page }) => {
         await page.setViewportSize({ width: 1280, height: 720 });
@@ -37,9 +37,9 @@ test.describe('Análise Técnica de QA - Seção Seja um Apoiador', () => {
         await expect(linkMaozinha).toHaveAttribute('target', '_blank');
     });
 
-    test.describe('Testes de Redirecionamento de Links', () => {
+    test.describe('Redirecionamento dos links', () => {
 
-        // ❌ ESTE TESTE DEVE FALHAR (Bug de redirecionamento no Header)
+        // Bug documentado: o link do Header ainda não aponta para a rota esperada.
         test('Deve conter o link correto para redirecionamento externo no botão do Header', async ({ page }) => {
             const btnHeader = page.locator('a[aria-label="Navegar para a página Seja um Apoiador"]');
 
@@ -65,7 +65,7 @@ test.describe('Análise Técnica de QA - Seção Seja um Apoiador', () => {
         });
     });
 
-    test.describe('Validação Mobile', () => {
+    test.describe('Experiência mobile', () => {
 
         test.beforeEach(async ({ page }) => {
             await page.setViewportSize({ width: 375, height: 812 });

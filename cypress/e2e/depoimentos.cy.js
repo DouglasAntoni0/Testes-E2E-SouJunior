@@ -71,7 +71,7 @@ describe('Seção de Depoimentos', () => {
             return;
           } else {
             cy.wrap($btn).click();
-            cy.wait(800); // Aguarda a animação de rolagem do carrossel
+            cy.wait(800); // Aguarda a rolagem do carrossel estabilizar.
             clicarAteOFinal();
           }
         });

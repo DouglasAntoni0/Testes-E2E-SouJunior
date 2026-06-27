@@ -1,191 +1,159 @@
 <p align="center">
-  <img src="https://soujunior.tech/assets/logoPrincipal-BiqxuLdz.svg" alt="SouJunior Logo" width="240" />
+  <img src="https://soujunior.tech/assets/logoPrincipal-BiqxuLdz.svg" alt="SouJunior Logo" width="230" />
 </p>
 
-<h1 align="center">🛡️ QA E2E Test Suite — SouJunior WebApp</h1>
+<h1 align="center">QA E2E Test Suite - SouJunior WebApp</h1>
 
 <p align="center">
-  <strong>Automação de testes End-to-End de alta cobertura com arquitetura dual-framework</strong><br/>
-  Cypress · Playwright · Repositório independente · Pronto para CI/CD
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Cypress-14.5-04C38E?style=for-the-badge&logo=cypress&logoColor=white" alt="Cypress" />
-  <img src="https://img.shields.io/badge/Playwright-1.59-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright" />
-  <img src="https://img.shields.io/badge/Node.js-20+-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/JavaScript-ES2024-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Testes-~49-blue?style=for-the-badge" alt="Total de Testes" />
-  <img src="https://img.shields.io/badge/Status-Em%20Expansão-blueviolet?style=for-the-badge" alt="Status" />
+  <strong>Uma suíte autoral de testes End-to-End criada para transformar risco de regressão em evidência técnica.</strong><br/>
+  Cypress + Playwright · 73 cenários · 17 specs · Bugs reais documentados · Arquitetura pronta para CI
 </p>
 
 <p align="center">
-  <a href="#-quick-start"><img src="https://img.shields.io/badge/▶_Quick_Start-000?style=flat-square" alt="Quick Start" /></a>
-  <a href="#-cobertura-de-testes"><img src="https://img.shields.io/badge/📊_Cobertura-000?style=flat-square" alt="Cobertura" /></a>
-  <a href="#-arquitetura-do-projeto"><img src="https://img.shields.io/badge/🏗_Arquitetura-000?style=flat-square" alt="Arquitetura" /></a>
-  <a href="#-roadmap"><img src="https://img.shields.io/badge/🚀_Roadmap-000?style=flat-square" alt="Roadmap" /></a>
+  <img src="https://img.shields.io/badge/Cypress-14.5.4-04C38E?style=for-the-badge&logo=cypress&logoColor=white" alt="Cypress 14.5.4" />
+  <img src="https://img.shields.io/badge/Playwright-1.59.1-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright 1.59.1" />
+  <img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js 18+" />
+  <img src="https://img.shields.io/badge/JavaScript-E2E-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Cenários-73-blue?style=for-the-badge" alt="73 cenários" />
+  <img src="https://img.shields.io/badge/Specs-17-blueviolet?style=for-the-badge" alt="17 specs" />
+</p>
+
+<p align="center">
+  <a href="#quick-start"><img src="https://img.shields.io/badge/Quick_Start-000?style=flat-square" alt="Quick Start" /></a>
+  <a href="#cobertura"><img src="https://img.shields.io/badge/Cobertura-000?style=flat-square" alt="Cobertura" /></a>
+  <a href="#como-interpretar-a-suíte"><img src="https://img.shields.io/badge/Leitura_da_suíte-000?style=flat-square" alt="Como interpretar" /></a>
+  <a href="#sobre-o-autor"><img src="https://img.shields.io/badge/Autor-000?style=flat-square" alt="Autor" /></a>
 </p>
 
 ---
 
-## 📌 Visão Geral
+## Visão Geral
 
-Este repositório contém uma **suíte completa de testes End-to-End** para a plataforma [SouJunior](https://soujunior.tech), implementada com **dual-framework** (Cypress + Playwright) em uma arquitetura **100% desacoplada** do código-fonte da aplicação.
+Este repositório reúne uma suíte independente de testes End-to-End para a plataforma [SouJunior](https://soujunior.tech). Ele foi criado para validar fluxos críticos da Home, identidade visual, navegação, responsividade, acessibilidade prática e integridade visual usando dois dos frameworks mais fortes do mercado: Cypress e Playwright.
 
-> **~49 cenários de teste** · **13 spec files** · **7 seções cobertas** · **2 frameworks** · **1 visão unificada de qualidade**
+O projeto nasceu de uma iniciativa voluntária e autônoma: enxergar uma oportunidade de aumentar a confiança da plataforma, desenhar uma estratégia de QA E2E do zero e entregar uma base que qualquer time poderia evoluir sem depender do código-fonte da aplicação.
 
-### Características-chave
+> 73 cenários · 17 arquivos de spec · 9 frentes funcionais/visuais · 2 frameworks · 1 repositório focado em qualidade de produto
 
-| Aspecto | Detalhe |
+## Sobre o Autor
+
+**Douglas Antonio** - QA Engineer e voluntário na SouJunior.
+
+Eu construí este projeto de ponta a ponta: estratégia, estrutura, escrita dos cenários, documentação, análise de bugs e organização para execução local. A ideia não foi apenas “ter testes”, mas criar uma suíte que mostra raciocínio de QA: entender risco, validar comportamento real do usuário, registrar evidências e deixar claro o que está pronto, o que falha e por quê.
+
+Para recrutadores: este repositório mostra mais do que sintaxe de Cypress ou Playwright. Ele mostra iniciativa, senso de produto, cuidado com acessibilidade, visão de manutenção e coragem de documentar problemas reais em vez de esconder falhas para deixar o relatório bonito.
+
+## Diferenciais Técnicos
+
+| Diferencial | O que isso demonstra |
 |---|---|
-| 🏗️ **Arquitetura** | Repositório independente — basta apontar para qualquer URL do site |
-| 🔄 **Dual-framework** | Cobertura espelhada em Cypress e Playwright para máxima confiabilidade |
-| 📦 **Massa de dados centralizada** | Diretório `shared/` com dados reutilizáveis entre frameworks |
-| 🔐 **Configuração por `.env`** | Troca de ambientes (local, staging, prod) sem alterar código |
-| 📱 **Responsividade** | Testes validam comportamento em viewports desktop e mobile |
-| ♿ **Acessibilidade** | Validações de `aria-expanded`, `aria-label`, foco via teclado |
-| 🖼️ **Integridade visual** | Verificação real de carregamento de imagens (`naturalWidth > 0`) |
+| **Dual-framework real** | Domínio prático de Cypress e Playwright, com cenários equivalentes em grande parte da suíte |
+| **Repositório desacoplado** | Testes apontam para a aplicação via URL, sem depender de imports internos do front-end |
+| **Cobertura funcional e visual** | Valida fluxo, texto, links, imagens carregadas, cores, viewport e estados de UI |
+| **Bugs como evidência** | Falhas existentes permanecem visíveis para servir como documentação executável dos problemas |
+| **Estrutura simples de evoluir** | Specs separados por seção, comandos diretos e configuração por `.env` |
+| **Mentalidade de produto** | Os testes priorizam impacto no usuário: navegação, responsividade, confiança visual e acessibilidade básica |
 
----
+## Cobertura
 
-## 👤 Sobre o Autor
-
-> **Douglas Antoni** — QA Engineer · Voluntário ativo na [SouJunior](https://soujunior.tech)
-
-Este projeto foi **concebido, arquitetado e desenvolvido integralmente por mim**, de forma **100% autônoma e voluntária**. Toda a suíte foi construída do zero — desde a definição da estratégia de testes, passando pela escolha da arquitetura dual-framework, até a implementação de cada cenário.
-
-### 💡 Motivação
-
-Ao identificar a **ausência total de cobertura E2E automatizada** na plataforma SouJunior, tomei a iniciativa de projetar e implementar esta infraestrutura com objetivos claros:
-
-- 🎯 **Prevenir regressões** antes que impactem o usuário final
-- 📊 **Estabelecer baseline de qualidade** mensurável e auditável
-- ⚡ **Acelerar o ciclo de releases** com validações automatizadas e confiáveis
-- 🧱 **Criar base escalável** que qualquer membro do time possa expandir
-- 🔍 **Documentar bugs reais** encontrados durante o desenvolvimento dos testes
-
-> _"Qualidade não é apenas encontrar bugs — é construir confiança no software antes que ele chegue ao usuário."_
-
----
-
-## 📊 Cobertura de Testes
-
-### Matriz de Cobertura por Seção
-
-| Seção da Aplicação | Cypress | Playwright | Cenários | Destaques |
+| Frente testada | Cypress | Playwright | Cenários | O que é validado |
 |---|:---:|:---:|:---:|---|
-| **Perguntas Frequentes (FAQ)** | ✅ | ✅ | 6 | 3 abas (Instituição, Voluntário, Mentor), accordion, ouvidoria |
-| **Depoimentos (Carrossel)** | ✅ | ✅ | 3 | Navegação multi-página, validação de dados, estados de botões |
-| **Nossas Iniciativas (Cards)** | ✅ | ✅ | 2 | Labs + Talk, redirecionamento via `window.open` |
-| **Faça Parte (Comunidade)** | ✅ | ✅ | 2 | Papéis (Júnior, Mentor, Head), link externo |
-| **Navegação — Menu Principal** | ✅ | ✅ | 1 | Scroll-to-section, âncoras |
-| **Header da Home** | ✅ | 🔜 | 7 | Scroll, mobile, sticky, teclado, hover, resiliência de rede |
-| **Seja um Apoiador** | ✅ | ✅ | 7 | Mascote flutuante, redirecionamentos, validação mobile |
+| **FAQ / Perguntas Frequentes** | Sim | Sim | 12 | Abas, accordion, respostas, estado ARIA, mobile e ouvidoria |
+| **Depoimentos** | Sim | Sim | 6 | Carrossel, dados dos cards, imagens carregadas e setas |
+| **Nossas Iniciativas** | Sim | Sim | 4 | Cards SouJunior Labs/Talk, textos, imagens e redirecionamentos |
+| **Faça Parte** | Sim | Sim | 4 | Papéis da comunidade e link para o Stars |
+| **Menu Principal** | Sim | Sim | 2 | Scroll até a seção de iniciativas |
+| **Header da Home** | Sim | Não | 7 | Scroll, rede, mobile, sticky, teclado e hover |
+| **Seja um Apoiador** | Sim | Sim | 14 | Mascote, seção, links, header e comportamento mobile |
+| **Nova Logo** | Sim | Sim | 8 | Header, Footer, favicon, responsividade e link estrutural |
+| **Novas Cores** | Sim | Sim | 16 | Footer, Hero, áreas de atuação e depoimentos em desktop/mobile |
+| **Total** | **40** | **33** | **73** | **Cobertura E2E distribuída entre comportamento, UI e identidade visual** |
 
-<p align="center">
-  <strong>7 seções · 13 spec files · ~49 cenários de teste</strong>
-</p>
+## Como Interpretar a Suíte
 
-### Categorias de Validação
+Esta suíte não foi feita para maquiar resultado. Alguns testes falham no baseline atual porque apontam bugs ou pendências reais da aplicação testada. Isso é intencionalmente transparente: um teste vermelho aqui pode ser um achado de QA, não um erro de automação.
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    PIRÂMIDE DE VALIDAÇÕES E2E                         │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                       │
-│   🔺 Resiliência                                                      │
-│   ├── Interceptação de falhas de rede (cy.intercept)                  │
-│   └── Comportamento gracioso em cenários de erro                      │
-│                                                                       │
-│   🔷 Interação & Navegação                                            │
-│   ├── Carrossel: avanço, retorno e estados de botões                  │
-│   ├── Accordion/FAQ: expandir, recolher, múltiplos abertos            │
-│   ├── Scroll-to-section via menu                                      │
-│   ├── Redirecionamentos externos (window.open, target="_blank")       │
-│   └── Navegação via teclado (Tab, focus management)                   │
-│                                                                       │
-│   🔶 Acessibilidade & UX                                              │
-│   ├── Atributos aria-expanded, aria-label                             │
-│   ├── Rotação de ícones (animação de seta 180°)                       │
-│   ├── Feedback visual em hover (cor, sublinhado)                      │
-│   └── Header sticky/fixed após scroll                                 │
-│                                                                       │
-│   🟩 Integridade Visual & Dados                                       │
-│   ├── Renderização e visibilidade de elementos                        │
-│   ├── Carregamento real de imagens (naturalWidth > 0)                 │
-│   ├── Integridade de textos, nomes, cargos, depoimentos              │
-│   └── Validação de href, target e rel em links                        │
-│                                                                       │
-│   📱 Responsividade                                                    │
-│   ├── Layout mobile (iPhone X — 375×812)                              │
-│   ├── Menu hambúrguer em viewport reduzido                            │
-│   └── Visibilidade condicional de elementos por viewport              │
-│                                                                       │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+Baseline local observado com a aplicação em `http://localhost:3000`:
 
----
+| Framework | Cenários | Passando | Falhando | Leitura correta |
+|---|---:|---:|---:|---|
+| **Cypress** | 40 | 27 | 13 | Falhas registram bugs de UI, acessibilidade, dependências de comandos e divergências visuais |
+| **Playwright** | 33 | 26 | 7 | Falhas preservam os mesmos achados sem silenciar comportamento incorreto |
+| **Total** | **73** | **53** | **20** | **A suíte entrega cobertura e evidência, não falso positivo** |
 
-## 🏗️ Arquitetura do Projeto
+## Bugs e Riscos Documentados
 
-```
+Durante a escrita dos testes, a suíte identificou pontos que merecem atenção do produto:
+
+| Área | Evidência capturada pelos testes | Impacto |
+|---|---|---|
+| **Header mobile** | Botão hambúrguer esperado não está disponível/visível no cenário testado | Acessibilidade e navegação mobile |
+| **Header sticky** | Header não permanece `fixed` ou `sticky` após scroll até o rodapé | Consistência de navegação |
+| **Header - Seja um Apoiador** | Link do header não possui `href`/`target` esperados | Redirecionamento quebrado ou incompleto |
+| **Logo do Footer** | Logo do rodapé não está envolvida por link para a Home | Navegação estrutural e consistência |
+| **FAQ** | Ícone de seta não reflete rotação esperada em alguns fluxos | Feedback visual de estado |
+| **Depoimentos / Faça Parte / Apoiador** | Algumas validações expõem divergências de conteúdo ou visibilidade | Integridade visual e textual |
+
+## Arquitetura do Projeto
+
+```text
 qa-e2e-tests/
-│
-├── 📁 cypress/                          # Framework 1 — Cypress
-│   ├── 📁 e2e/                          # Specs de teste
-│   │   ├── depoimentos.cy.js            ─ Carrossel de depoimentos
-│   │   ├── façaparte.cy.js              ─ Seção "Faça Parte" / Comunidade
-│   │   ├── headerdahome.cy.js           ─ Header: scroll, mobile, a11y, rede
-│   │   ├── iniciativas.cy.js            ─ Cards de iniciativas (Labs + Talk)
-│   │   ├── nossainiciativas.cy.js       ─ Navegação do menu principal
-│   │   ├── perguntasfrequentes.cy.js    ─ FAQ completo (3 abas, 6 cenários)
-│   │   └── sejaumapoiador.cy.js         ─ Seção Apoiador + mascote flutuante
-│   └── 📁 support/
-│       └── e2e.js                       ─ Configuração global do Cypress
-│
-├── 📁 tests/                            # Framework 2 — Playwright
-│   └── 📁 playwright/
+├── cypress/
+│   ├── e2e/
+│   │   ├── depoimentos.cy.js
+│   │   ├── façaparte.cy.js
+│   │   ├── headerdahome.cy.js
+│   │   ├── iniciativas.cy.js
+│   │   ├── nossainiciativas.cy.js
+│   │   ├── novalogo.cy.js
+│   │   ├── novascores.cy.js
+│   │   ├── perguntasfrequentes.cy.js
+│   │   └── sejaumapoiador.cy.js
+│   └── support/
+│       ├── commands.js
+│       └── e2e.js
+├── tests/
+│   └── playwright/
 │       ├── depoimentos.spec.js
 │       ├── façaparte.spec.js
 │       ├── iniciativas.spec.js
 │       ├── nossainiciativas.spec.js
+│       ├── novalogo.spec.js
+│       ├── novascores.spec.js
 │       ├── perguntasfrequentes.spec.js
 │       └── sejaumapoiador.spec.js
-│
-├── 📁 shared/                           # Massa de dados compartilhada
-│   └── depoimentos.data.js             ─ Dados reutilizáveis entre frameworks
-│
-├── ⚙️ cypress.config.js                 ─ Configuração do Cypress + dotenv
-├── ⚙️ playwright.config.js              ─ Configuração do Playwright + dotenv
-├── 📋 package.json                      ─ Scripts, dependências, metadados
-├── 🔒 .env.example                      ─ Template de variáveis de ambiente
-└── 📖 README.md                         ─ Documentação do projeto
+├── shared/
+│   └── depoimentos.data.js
+├── cypress.config.js
+├── playwright.config.js
+├── package.json
+├── package-lock.json
+├── .env.example
+└── README.md
 ```
 
-### 🧠 Decisões Técnicas
+## Decisões de QA
 
-| Decisão | Justificativa | Impacto |
-|---|---|---|
-| **Dual-framework** | Demonstra domínio de ambos os líderes de mercado; permite comparação de abordagens e trade-offs | Alta confiabilidade |
-| **Repositório desacoplado** | Testes independentes do codebase — basta trocar a `BASE_URL` | Flexibilidade total |
-| **Massa de dados centralizada** | Arquivo `shared/` elimina duplicação entre frameworks | Manutenção simplificada |
-| **Configuração via `.env`** | Suporte a local, staging e produção sem alterar código | Deploy-ready |
-| **Worker único (Playwright)** | Execução sequencial evita race conditions em testes DOM-heavy | Estabilidade |
-| **Interceptação de rede (Cypress)** | Testa resiliência da UI a falhas de serviços externos | Robustez |
-| **Viewport parametrizado** | Validação mobile integrada à suíte principal | Cobertura responsiva |
+| Decisão | Motivo |
+|---|---|
+| **Dois frameworks na mesma estratégia** | Comparar abordagens, aumentar repertório técnico e validar comportamento por motores diferentes |
+| **Specs por seção da aplicação** | Facilitar manutenção, leitura e expansão por qualquer pessoa do time |
+| **Configuração via `.env`** | Trocar ambiente sem alterar código |
+| **Worker único no Playwright** | Priorizar estabilidade em uma suíte DOM-heavy |
+| **Validação de imagem real** | Evitar falso positivo de imagem presente no DOM mas quebrada no carregamento |
+| **Falhas mantidas visíveis** | Transformar bug em evidência, sem pular teste nem enfraquecer assert |
 
----
-
-## ⚡ Quick Start
+## Quick Start
 
 ### Pré-requisitos
 
-| Requisito | Versão mínima |
+| Requisito | Versão recomendada |
 |---|---|
-| **Node.js** | ≥ 18 |
-| **npm** | ≥ 9 |
-| **Aplicação SouJunior** | Rodando localmente ou acessível via URL |
+| Node.js | 18 ou superior |
+| npm | 9 ou superior |
+| Aplicação SouJunior | Rodando localmente ou disponível por URL |
 
-### 1️⃣ Clonar e instalar
+### Instalação
 
 ```bash
 git clone https://github.com/douglasantoni0/Testes-E2E-SouJunior.git
@@ -194,184 +162,73 @@ npm install
 npx playwright install
 ```
 
-### 2️⃣ Configurar ambiente
+### Configuração
 
 ```bash
 cp .env.example .env
 ```
 
-Edite o `.env` conforme necessário:
+Exemplo de `.env`:
 
 ```env
-# URL base da aplicação sob teste
 BASE_URL=http://localhost:3000
 ```
 
-### 3️⃣ Executar os testes
+### Execução
 
-| Comando | Descrição | Framework |
-|---|---|---|
-| `npm run cypress:open` | Modo interativo com UI do Cypress | Cypress |
-| `npm run cypress:run` | Modo headless (CI-friendly) | Cypress |
-| `npm run playwright:test` | Modo headless (CI-friendly) | Playwright |
-| `npm run playwright:headed` | Com navegador visível | Playwright |
-| `npm run test:e2e` | Executa **ambos** sequencialmente | Ambos |
-
-> 💡 **Dica:** Use `npm run cypress:open` para debugging visual e `npm run test:e2e` para validação completa antes de um merge.
-
----
-
-## 🔄 Workflow de Execução
-
-```
-┌─────────────────────────────────────┐       ┌─────────────────────────────────────┐
-│   📂 Terminal 1 — Aplicação         │       │   📂 Terminal 2 — Testes            │
-│                                     │       │                                     │
-│   cd soujunior-webapp               │       │   cd Testes-E2E-SouJunior           │
-│   npm start                         │       │   npm run test:e2e                  │
-│                                     │       │                                     │
-│   🌐 http://localhost:3000 ─────────┼───────┼── BASE_URL configurada no .env      │
-└─────────────────────────────────────┘       └─────────────────────────────────────┘
-
-                              Fluxo de execução:
-                     ┌──────────────────────────────────┐
-                     │  1. Suba a aplicação (Terminal 1) │
-                     │  2. Execute os testes (Terminal 2)│
-                     │  3. Analise os resultados ✅/❌   │
-                     └──────────────────────────────────┘
-```
-
-### Ambientes suportados
-
-| Ambiente | Uso | Configuração |
-|---|---|---|
-| **Local** | Desenvolvimento diário | `BASE_URL=http://localhost:3000` |
-| **Staging** | Validação pré-deploy | `BASE_URL=https://staging.soujunior.tech` |
-| **Produção** | Smoke tests pós-deploy | `BASE_URL=https://soujunior.tech` |
-
----
-
-## 🧪 Filosofia de Testes
-
-### Princípios que guiam este projeto
-
-```
-┌──────────────────────────────────────────────────────────┐
-│  1. TESTES COMO DOCUMENTAÇÃO VIVA                        │
-│     Cada spec descreve o comportamento esperado          │
-│     da seção, servindo como fonte de verdade.            │
-│                                                          │
-│  2. INDEPENDÊNCIA DE IMPLEMENTAÇÃO                       │
-│     Os testes interagem com a UI renderizada,            │
-│     não com o código-fonte — são agnósticos              │
-│     ao framework front-end utilizado.                    │
-│                                                          │
-│  3. DETERMINISMO SOBRE VELOCIDADE                        │
-│     Worker único e waits explícitos garantem             │
-│     resultados consistentes em qualquer ambiente.        │
-│                                                          │
-│  4. MANUTENIBILIDADE PRIMEIRO                            │
-│     Massa de dados centralizada, configuração            │
-│     via .env, e estrutura previsível de arquivos.        │
-│                                                          │
-│  5. ACESSIBILIDADE NÃO É PLUS — É BASELINE              │
-│     Atributos ARIA, foco via teclado e semântica         │
-│     HTML são validados como requisitos obrigatórios.     │
-└──────────────────────────────────────────────────────────┘
-```
-
-### O que ficou de fora (e por quê)
-
-| Tipo | Razão |
+| Comando | Uso |
 |---|---|
-| **Testes unitários** | Acoplados ao `src/` — pertencem ao repositório da aplicação |
-| **Testes de componente** | Requerem importação direta de módulos internos |
-| **Testes de API** | Foco exclusivo na camada de interface do usuário |
+| `npm run cypress:open` | Abre o Cypress em modo interativo |
+| `npm run cypress:run` | Executa Cypress em modo headless |
+| `npm run playwright:test` | Executa Playwright em modo headless |
+| `npm run playwright:headed` | Executa Playwright com navegador visível |
+| `npm run test:e2e` | Executa Cypress e Playwright em sequência |
 
-> Esta separação segue o princípio de **responsabilidade única** aplicado à infraestrutura de testes — cada repositório cuida da sua camada.
+Fluxo recomendado:
 
----
+```text
+Terminal 1: subir a aplicação SouJunior em http://localhost:3000
+Terminal 2: executar npm run cypress:run ou npm run playwright:test
+```
 
-## 🐛 Bugs Documentados
+## Tech Stack
 
-Durante o desenvolvimento da suíte de testes, os seguintes bugs foram identificados e documentados:
+| Pacote | Versão | Papel no projeto |
+|---|---:|---|
+| `cypress` | ^14.5.4 | Automação E2E com execução in-browser |
+| `@playwright/test` | ^1.59.1 | Automação E2E moderna, rápida e com traces/videos em falha |
+| `dotenv` | ^16.6.1 | Configuração de ambiente via `.env` |
 
-| # | Seção | Bug | Severidade |
-|---|---|---|---|
-| 1 | Header | Ausência de `aria-label` no botão hambúrguer mobile | Média |
-| 2 | Header | Botão "Seja um Apoiador" no header aponta rota incorreta | Alta |
+## Roadmap
 
-> Estes bugs foram **encontrados organicamente** durante a escrita dos testes — demonstrando o valor imediato da automação E2E em detectar problemas reais.
+- [x] Cobertura da FAQ com abas, accordion e responsividade
+- [x] Cobertura do carrossel de depoimentos
+- [x] Cobertura de Nossas Iniciativas
+- [x] Cobertura de Faça Parte
+- [x] Cobertura de navegação do menu principal
+- [x] Cobertura do Header da Home no Cypress
+- [x] Cobertura de Seja um Apoiador nos dois frameworks
+- [x] Cobertura da nova logo nos dois frameworks
+- [x] Cobertura da nova paleta de cores nos dois frameworks
+- [ ] Espelhar Header da Home no Playwright
+- [ ] Integrar GitHub Actions para execução automatizada
+- [ ] Adicionar axe-core para acessibilidade automatizada
+- [ ] Adicionar relatório Allure ou HTML consolidado
+- [ ] Evoluir para regressão visual com screenshots comparativos
 
----
+## Contribuindo
 
-## 🚀 Roadmap
+Se você for evoluir esta suíte, mantenha a proposta do projeto:
 
-- [x] Cobertura da seção **Perguntas Frequentes** (FAQ) — 3 abas
-- [x] Cobertura da seção **Depoimentos** — carrossel multi-página
-- [x] Cobertura da seção **Nossas Iniciativas** — Cards com redirecionamento
-- [x] Cobertura da seção **Faça Parte** — Comunidade e papéis
-- [x] Cobertura da seção **Navegação do Menu Principal**
-- [x] Cobertura da seção **Header da Home** — UI, a11y, rede, mobile
-- [x] Cobertura da seção **Seja um Apoiador** — mascote, links, mobile
-- [ ] Espelhamento do **Header** no Playwright
-- [ ] Cobertura da seção **Hero / Banner principal**
-- [ ] Cobertura do **Footer** e links de redes sociais
-- [ ] Testes de **acessibilidade automatizada** com axe-core
-- [ ] Testes de **performance** com Lighthouse CI
-- [ ] Integração com **GitHub Actions** para CI/CD automatizado
-- [ ] Relatórios visuais com **Allure Report**
-- [ ] Testes de **regressão visual** com screenshots comparativos
+1. Escreva cenários em português claro.
+2. Preserve seletores semânticos sempre que possível.
+3. Não enfraqueça asserts para “ficar verde”.
+4. Documente falhas reais com nomes de teste objetivos.
+5. Rode ao menos o framework afetado antes de abrir PR.
 
----
+## Contato
 
-## 🛠️ Tech Stack
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Cypress-04C38E?style=for-the-badge&logo=cypress&logoColor=white" alt="Cypress" />
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=black" alt="dotenv" />
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-</p>
-
-### Dependências do projeto
-
-| Pacote | Versão | Finalidade |
-|---|---|---|
-| `cypress` | ^14.5.4 | Framework E2E — arquitetura in-browser |
-| `@playwright/test` | ^1.59.1 | Framework E2E — arquitetura out-of-process |
-| `dotenv` | ^16.6.1 | Carregamento de variáveis de ambiente |
-
-> **Zero dependências desnecessárias** — cada pacote tem uma justificativa clara.
-
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Se você é membro do time SouJunior, siga estes passos:
-
-1. Faça um **fork** do repositório
-2. Crie uma branch com o padrão: `feat/nome-da-secao` ou `fix/descricao-do-bug`
-3. Siga a **estrutura existente** — cada seção tem um arquivo Cypress e um Playwright
-4. Garanta que os testes **passam localmente** antes do PR (`npm run test:e2e`)
-5. Abra um **Pull Request** com descrição clara do que foi adicionado/corrigido
-
-### Convenções de código
-
-- Descreva os testes em **português** (consistência com o projeto)
-- Use **seletores semânticos** (`aria-label`, `role`, IDs) em vez de classes CSS
-- Mantenha **massa de dados** no diretório `shared/` quando compartilhada
-- Um `describe` por arquivo, nomes claros e autodescritivos
-
----
-
-## 📫 Contato
-
-**Douglas Antonio** · QA Engineer
+**Douglas Antonio** - QA Engineer
 
 <p align="center">
   <a href="https://www.linkedin.com/in/douglas-antonio-qa/">
@@ -381,22 +238,14 @@ Contribuições são bem-vindas! Se você é membro do time SouJunior, siga este
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   <a href="https://douglasqa.netlify.app">
-    <img src="https://img.shields.io/badge/Portfólio-000?style=for-the-badge&logo=netlify&logoColor=white" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfólio-000?style=for-the-badge&logo=netlify&logoColor=white" alt="Portfólio" />
   </a>
 </p>
-
----
-
-## 📄 Licença
-
-Este projeto é open-source e desenvolvido como trabalho voluntário para a comunidade [SouJunior](https://www.soujunior.tech/).
 
 ---
 
 <p align="center">
   <img src="https://soujunior.tech/assets/logoPrincipal-BiqxuLdz.svg" alt="SouJunior" width="80" />
   <br/>
-  <sub>Desenvolvido com ☕ e dedicação por <strong>Douglas Antonio</strong> — Voluntário SouJunior</sub>
-  <br/>
-  <sub>⭐ Se este projeto te ajudou, deixe uma estrela!</sub>
+  <sub>Projeto desenvolvido de forma voluntária por <strong>Douglas Antonio</strong> para fortalecer qualidade, confiança e evolução da plataforma SouJunior.</sub>
 </p>
