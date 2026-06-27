@@ -1,4 +1,4 @@
-describe('Navegação do Header - Scroll da Tela (Home)', () => {
+describe('Header da Home', () => {
 
     beforeEach(() => {
         cy.visit('/');
@@ -24,30 +24,30 @@ describe('Navegação do Header - Scroll da Tela (Home)', () => {
         cy.window().its('scrollY').should('be.greaterThan', 0);
     });
 
-    describe('Validações Avançadas do Header - UI, Acessibilidade e Rede', () => {
+    describe('Comportamentos de UI, acessibilidade e rede', () => {
 
         beforeEach(() => {
             cy.visit('/');
         });
 
-        it('Deve lidar de forma graciosa com falha de rede ao tentar aceder a rota externa', () => {
+        it('Deve lidar de forma graciosa com falha de rede ao tentar acessar rota externa', () => {
             cy.intercept('GET', '**/stars.soujunior.tech/**', { forceNetworkError: true }).as('siteOffline');
 
             cy.get('nav[role="navigation"]').contains('Faça parte').click();
         });
 
-        it('Deve colapsar os itens de menu e exibir o botão hambúrguer em ecrãs de telemóvel', () => {
+        it('Deve colapsar os itens de menu e exibir o botão hambúrguer no mobile', () => {
             cy.viewport(390, 844);
 
             cy.get('a[aria-label="Navegar para a página Sobre Nós"]').should('not.be.visible');
 
-            // NOTA: Este passo vai falhar intencionalmente até o bug ser corrigido!
+            // Bug documentado: o botão mobile esperado ainda não está disponível.
             cy.get('button[aria-label="Abrir menu mobile"]')
                 .should('exist')
                 .and('be.visible');
         });
 
-        it('Deve manter o cabeçalho visível no topo do ecrã após fazer scroll para o rodapé', () => {
+        it('Deve manter o cabeçalho visível no topo da tela após fazer scroll para o rodapé', () => {
             cy.scrollTo('bottom');
 
             cy.get('header[role="banner"]')
@@ -68,7 +68,7 @@ describe('Navegação do Header - Scroll da Tela (Home)', () => {
             cy.focused().should('have.attr', 'aria-label', 'Navegar para a página Nossas Iniciativas');
         });
 
-        it('Deve apresentar feedback visual (cor azul e sublinhado) ao passar o ponteiro do rato sobre um link', () => {
+        it('Deve apresentar feedback visual ao passar o mouse sobre um link', () => {
             cy.get('a[aria-label="Navegar para a página Sobre Nós"]').realHover();
 
             cy.get('a[aria-label="Navegar para a página Sobre Nós"]')

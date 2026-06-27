@@ -1,4 +1,4 @@
-describe('Análise Técnica de QA - Seção Seja um Apoiador', () => {
+describe('Seção Seja um Apoiador', () => {
 
     beforeEach(() => {
         cy.viewport(1280, 720);
@@ -36,7 +36,7 @@ describe('Análise Técnica de QA - Seção Seja um Apoiador', () => {
             .and('have.attr', 'target', '_blank');
     });
 
-    describe('Testes de Redirecionamento de Links', () => {
+    describe('Redirecionamento dos links', () => {
 
         it('Deve conter o link correto para redirecionamento externo no botão do Header', () => {
             cy.get('a[aria-label="Navegar para a página Seja um Apoiador"]')
@@ -62,7 +62,7 @@ describe('Análise Técnica de QA - Seção Seja um Apoiador', () => {
         });
     });
 
-    describe('Validação Mobile', () => {
+    describe('Experiência mobile', () => {
 
         beforeEach(() => {
             cy.viewport('iphone-x');

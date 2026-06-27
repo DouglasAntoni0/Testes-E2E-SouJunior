@@ -1,10 +1,10 @@
-describe('Papeis na SouJunior - Validação da Seção da Comunidade', () => {
+describe('Papéis na SouJunior - seção da comunidade', () => {
 
     beforeEach(() => {
         cy.visit('localhost:3000');
     });
 
-    it('CT-001: Deve validar a exibição e os textos dos papéis na seção', () => {
+    it('Deve apresentar os papéis da comunidade com seus textos de apoio', () => {
 
         cy.contains('h2', 'Faça você também parte da nossa comunidade!')
             .scrollIntoView()
@@ -23,7 +23,7 @@ describe('Papeis na SouJunior - Validação da Seção da Comunidade', () => {
         cy.contains('p', 'Head organiza e lidera equipes, toma decisões e garante que tudo funcione bem dentro do projeto.').should('be.visible');
     });
 
-    it('CT-002: Deve validar o link e o redirecionamento do botão "Participar"', () => {
+    it('Deve manter o botão "Participar" apontando para o Stars', () => {
 
         cy.contains('a', 'Participar')
             .scrollIntoView()

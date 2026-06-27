@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Papeis na SouJunior - Validação da Seção da Comunidade', () => {
+test.describe('Papéis na SouJunior - seção da comunidade', () => {
 
     test.beforeEach(async ({ page }) => {
         await page.goto('http://localhost:3000');
     });
 
-    test('CT-001: Deve validar a exibição e os textos dos papéis na seção', async ({ page }) => {
+    test('Deve apresentar os papéis da comunidade com seus textos de apoio', async ({ page }) => {
 
         const tituloSecao = page.getByRole('heading', { name: 'Faça você também parte da nossa comunidade!', exact: true });
         await tituloSecao.scrollIntoViewIfNeeded();
@@ -25,7 +25,7 @@ test.describe('Papeis na SouJunior - Validação da Seção da Comunidade', () =
         await expect(page.getByText('Head organiza e lidera equipes, toma decisões e garante que tudo funcione bem dentro do projeto.')).toBeVisible();
     });
 
-    test('CT-002: Deve validar o link e o redirecionamento do botão "Participar"', async ({ page }) => {
+    test('Deve manter o botão "Participar" apontando para o Stars', async ({ page }) => {
 
         const btnParticipar = page.getByRole('link', { name: 'Participar' });
 
