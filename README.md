@@ -134,6 +134,20 @@ qa-e2e-tests/
 └── README.md
 ```
 
+## Page Objects Leves
+
+A suíte usa Page Objects de forma intencional: só onde existe repetição real, sem esconder a leitura dos cenários. A regra é simples: o spec continua contando o comportamento esperado; o Page Object concentra navegação, seletores e ações recorrentes.
+
+| Camada | Responsabilidade |
+|---|---|
+| `HomePage` | Centraliza navegação inicial da aplicação |
+| `DepoimentosSection` | Valida cards, imagens, textos e navegação do carrossel |
+| `FaqSection` | Agrupa ações de accordion, abas, perguntas, respostas e ouvidoria |
+| `LogoSection` | Valida logo, favicon, links estruturais e responsividade |
+| `ColorPaletteSection` | Valida aplicação da nova paleta em Hero, Footer, áreas e depoimentos |
+
+Essa arquitetura melhora manutenção sem transformar o projeto em um framework pesado. Se um seletor mudar, o ajuste fica concentrado; se um recrutador ou QA abrir um spec, ainda consegue entender o fluxo de negócio rapidamente.
+
 ## Decisões de QA
 
 | Decisão | Motivo |
@@ -213,6 +227,7 @@ Terminal 2: executar npm run cypress:run ou npm run playwright:test
 - [x] Cobertura de Seja um Apoiador nos dois frameworks
 - [x] Cobertura da nova logo nos dois frameworks
 - [x] Cobertura da nova paleta de cores nos dois frameworks
+- [x] Organização dos fluxos repetidos com Page Objects leves
 - [ ] Espelhar Header da Home no Playwright
 - [ ] Integrar GitHub Actions para execução automatizada
 - [ ] Adicionar axe-core para acessibilidade automatizada
