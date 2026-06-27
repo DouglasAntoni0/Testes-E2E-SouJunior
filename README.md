@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://soujunior.tech/assets/logoPrincipal-BiqxuLdz.svg" alt="SouJunior Logo" width="230" />
+  <img src="https://www.soujunior.tech/" alt="SouJunior Logo" width="230" />
 </p>
 
 <h1 align="center">QA E2E Test Suite - SouJunior WebApp</h1>
@@ -29,7 +29,7 @@
 
 ## Visão Geral
 
-Este repositório reúne uma suíte independente de testes End-to-End para a plataforma [SouJunior](https://soujunior.tech). Ele foi criado para validar fluxos críticos da Home, identidade visual, navegação, responsividade, acessibilidade prática e integridade visual usando dois dos frameworks mais fortes do mercado: Cypress e Playwright.
+Este repositório reúne uma suíte independente de testes End-to-End para a plataforma [SouJunior](https://www.soujunior.tech/). Ele foi criado para validar fluxos críticos da Home, identidade visual, navegação, responsividade, acessibilidade prática e integridade visual usando dois dos frameworks mais fortes do mercado: Cypress e Playwright.
 
 O projeto nasceu de uma iniciativa voluntária e autônoma: enxergar uma oportunidade de aumentar a confiança da plataforma, desenhar uma estratégia de QA E2E do zero e entregar uma base que qualquer time poderia evoluir sem depender do código-fonte da aplicação.
 
@@ -263,7 +263,7 @@ Se você for evoluir esta suíte, mantenha a proposta do projeto:
 ---
 
 <p align="center">
-  <img src="https://soujunior.tech/assets/logoPrincipal-BiqxuLdz.svg" alt="SouJunior" width="80" />
+  <img src="https://www.soujunior.tech/" alt="SouJunior" width="80" />
   <br/>
   <sub>Projeto desenvolvido de forma voluntária por <strong>Douglas Antonio</strong> para fortalecer qualidade, confiança e evolução da plataforma SouJunior.</sub>
 </p>
