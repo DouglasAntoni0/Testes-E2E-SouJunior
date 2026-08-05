@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Uma suíte autoral de testes End-to-End criada para transformar risco de regressão em evidência técnica.</strong><br/>
-  Cypress + Playwright · 73 cenários · 17 specs · Bugs reais documentados · Arquitetura pronta para CI
+  Cypress + Playwright · 97 cenários · 19 specs · Bugs reais documentados · Arquitetura pronta para CI
 </p>
 
 <p align="center">
@@ -14,8 +14,8 @@
   <img src="https://img.shields.io/badge/Playwright-1.59.1-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright 1.59.1" />
   <img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js 18+" />
   <img src="https://img.shields.io/badge/JavaScript-E2E-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Cenários-73-blue?style=for-the-badge" alt="73 cenários" />
-  <img src="https://img.shields.io/badge/Specs-17-blueviolet?style=for-the-badge" alt="17 specs" />
+  <img src="https://img.shields.io/badge/Cenários-97-blue?style=for-the-badge" alt="97 cenários" />
+  <img src="https://img.shields.io/badge/Specs-19-blueviolet?style=for-the-badge" alt="19 specs" />
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@ Este repositório reúne uma suíte independente de testes End-to-End para a pla
 
 O projeto nasceu de uma iniciativa voluntária e autônoma: enxergar uma oportunidade de aumentar a confiança da plataforma, desenhar uma estratégia de QA E2E do zero e entregar uma base que qualquer time poderia evoluir sem depender do código-fonte da aplicação.
 
-> 73 cenários · 17 arquivos de spec · 9 frentes funcionais/visuais · 2 frameworks · 1 repositório focado em qualidade de produto
+> 97 cenários · 19 arquivos de spec · 10 frentes funcionais/visuais · 2 frameworks · 1 repositório focado em qualidade de produto
 
 ## Sobre o Autor
 
@@ -67,19 +67,20 @@ Este repositório mostra mais do que sintaxe de Cypress ou Playwright. Ele mostr
 | **Seja um Apoiador** | Sim | Sim | 14 | Mascote, seção, links, header e comportamento mobile |
 | **Nova Logo** | Sim | Sim | 8 | Header, Footer, favicon, responsividade e link estrutural |
 | **Novas Cores** | Sim | Sim | 16 | Footer, Hero, áreas de atuação e depoimentos em desktop/mobile |
-| **Total** | **40** | **33** | **73** | **Cobertura E2E distribuída entre comportamento, UI e identidade visual** |
+| **Áreas de Atuação** | Sim | Sim | 24 | Scroll, carrossel, setas, 11 cards, rotas e conteúdo de cada área |
+| **Total** | **52** | **45** | **97** | **Cobertura E2E distribuída entre comportamento, UI e identidade visual** |
 
 ## Como Interpretar a Suíte
 
 Esta suíte não foi feita para maquiar resultado. Alguns testes falham no baseline atual porque apontam bugs ou pendências reais da aplicação testada. Isso é intencionalmente transparente: um teste vermelho aqui pode ser um achado de QA, não um erro de automação.
 
-Baseline local observado com a aplicação em `http://localhost:3000`:
+Baseline local consolidado com a aplicação em `http://localhost:3000`. Os 24 novos cenários de Áreas de atuação foram executados com sucesso; os demais números preservam o baseline documentado anteriormente:
 
 | Framework | Cenários | Passando | Falhando | Leitura correta |
 |---|---:|---:|---:|---|
-| **Cypress** | 40 | 27 | 13 | Falhas registram bugs de UI, acessibilidade, dependências de comandos e divergências visuais |
-| **Playwright** | 33 | 26 | 7 | Falhas preservam os mesmos achados sem silenciar comportamento incorreto |
-| **Total** | **73** | **53** | **20** | **A suíte entrega cobertura e evidência, não falso positivo** |
+| **Cypress** | 52 | 39 | 13 | Falhas registram bugs de UI, acessibilidade, dependências de comandos e divergências visuais |
+| **Playwright** | 45 | 38 | 7 | Falhas preservam os mesmos achados sem silenciar comportamento incorreto |
+| **Total** | **97** | **77** | **20** | **A suíte entrega cobertura e evidência, não falso positivo** |
 
 ## Bugs e Riscos Documentados
 
@@ -100,6 +101,7 @@ Durante a escrita dos testes, a suíte identificou pontos que merecem atenção 
 qa-e2e-tests/
 ├── cypress/
 │   ├── e2e/
+│   │   ├── areasdeatuação.cy.js
 │   │   ├── depoimentos.cy.js
 │   │   ├── façaparte.cy.js
 │   │   ├── headerdahome.cy.js
@@ -116,6 +118,7 @@ qa-e2e-tests/
 ├── tests/
 │   └── playwright/
 │       ├── pages/                  # Page Objects leves usados pelos specs Playwright
+│       ├── areasdeatuação.spec.js
 │       ├── depoimentos.spec.js
 │       ├── façaparte.spec.js
 │       ├── iniciativas.spec.js
@@ -227,6 +230,7 @@ Terminal 2: executar npm run cypress:run ou npm run playwright:test
 - [x] Cobertura de Seja um Apoiador nos dois frameworks
 - [x] Cobertura da nova logo nos dois frameworks
 - [x] Cobertura da nova paleta de cores nos dois frameworks
+- [x] Cobertura completa das Áreas de atuação nos dois frameworks
 - [x] Organização dos fluxos repetidos com Page Objects leves
 - [ ] Espelhar Header da Home no Playwright
 - [ ] Integrar GitHub Actions para execução automatizada
