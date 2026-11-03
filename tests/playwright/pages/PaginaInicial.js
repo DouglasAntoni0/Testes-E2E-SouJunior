@@ -4,7 +4,7 @@ class PaginaInicial {
   constructor(pagina) {
     this.pagina = pagina;
     this.cabecalho = pagina.getByRole('banner');
-    this.rodape = pagina.getByRole('contentinfo');
+    this.rodape = pagina.locator('footer');
     this.sobre = pagina.locator('#sobre-nos');
     this.depoimentos = pagina.locator('#depoimentos');
     this.noticias = pagina.locator('#noticias-eventos');

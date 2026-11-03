@@ -92,6 +92,7 @@ test.describe('Notícias e Eventos', () => {
   }) => {
     const inicio = new PaginaInicial(pagina);
     await pagina.setViewportSize({ width: 375, height: 812 });
+    await inicio.abrir();
     await inicio.noticias.scrollIntoViewIfNeeded();
     await expect(inicio.noticias.getByRole('button', { name: /^Ir para página/ })).toHaveCount(4);
     await inicio.noticias.getByRole('button', { name: 'Ir para página 4', exact: true }).click();
@@ -108,10 +109,21 @@ test.describe('Notícias e Eventos', () => {
   }) => {
     const inicio = new PaginaInicial(pagina);
     await pagina.setViewportSize({ width: 375, height: 812 });
+    await inicio.abrir();
     await inicio.noticias.scrollIntoViewIfNeeded();
     await validarLimitesHorizontais(inicio.noticias.getByText(eventos[0].data, { exact: true }));
     await validarLimitesHorizontais(
       inicio.noticias.getByRole('button', { name: 'Confira', exact: true }).first(),
     );
+  });
+
+  test('[CT-NOT-010] Deve adaptar os indicadores ao mudar de desktop para mobile', async ({
+    page: pagina,
+  }) => {
+    const inicio = new PaginaInicial(pagina);
+    const indicadores = inicio.noticias.getByRole('button', { name: /^Ir para página/ });
+    await expect(indicadores).toHaveCount(2);
+    await pagina.setViewportSize({ width: 375, height: 812 });
+    await expect(indicadores).toHaveCount(4);
   });
 });

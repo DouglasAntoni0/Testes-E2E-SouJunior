@@ -8,7 +8,7 @@ class PaginaInicial {
     return cy.findByRole('banner');
   }
   rodape() {
-    return cy.findByRole('contentinfo');
+    return cy.get('footer');
   }
   sobre() {
     return cy.get('#sobre-nos');
@@ -21,7 +21,8 @@ class PaginaInicial {
   }
 
   logo(local) {
-    return cy.findByRole(local).findByRole('link', { name: DESCRICAO_LOGO, exact: true });
+    const regiao = local === 'contentinfo' ? this.rodape() : cy.findByRole(local);
+    return regiao.findByRole('link', { name: DESCRICAO_LOGO, exact: true });
   }
 
   itemDoMenu(nome) {

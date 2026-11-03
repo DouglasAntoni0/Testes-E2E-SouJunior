@@ -36,7 +36,7 @@ Os [registros no projeto da SouJunior](https://github.com/orgs/SouJunior/project
 | Depoimentos           | Oito relatos, fotos, cargos, textos e navegação entre lotes     |
 | Iniciativas           | Ocultação da seção e dos atalhos durante a pausa dos programas  |
 | Comunidade            | Papéis de Júnior, Mentor e Head, além do acesso ao cadastro     |
-| Notícias e Eventos    | Informações dos quatro dias, carrossel e destinos dos vídeos    |
+| Notícias e Eventos    | Quatro eventos, vídeos, indicadores mobile e mudança de resolução |
 | Apoio                 | Seção, mascote no desktop, faixa mobile e transições de rolagem |
 | FAQ e Ouvidoria       | Categorias, respostas, expansão, teclado e acesso à Ouvidoria   |
 | Identidade visual     | Logos, favicon e contratos da paleta de cores                   |
@@ -53,6 +53,8 @@ Os dados de áreas, papéis, eventos, perguntas e depoimentos ficam em **shared/
 Nos links acionados por JavaScript, verifico o destino da nova aba sem depender da disponibilidade do serviço externo. Nos links HTML, verifico o endereço e, quando previsto no caso, a abertura em outra aba e os atributos de proteção. A documentação distingue esses contratos da validação do conteúdo de sites terceiros.
 
 Para acessibilidade, cubro interações práticas de teclado, nomes acessíveis e estados ARIA. Para fidelidade ao Figma, os roteiros de revisão visual complementam a automação.
+
+As verificações de largura consideram a área útil do navegador, inclusive quando há barra de rolagem. No carrossel de eventos, o acesso pelo celular e a mudança de resolução são cenários separados.
 
 ## Como executar
 

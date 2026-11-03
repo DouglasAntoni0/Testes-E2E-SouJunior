@@ -51,7 +51,7 @@ test.describe('Identidade visual: paleta de cores', () => {
         page: pagina,
       }) => {
         const inicio = new PaginaInicial(pagina);
-        const textos = inicio.depoimentos.locator('[role="list"] > div > div:first-child p');
+        const textos = inicio.depoimentos.locator('article p');
         await expect(textos).toHaveCount(8);
         for (const texto of await textos.all()) await validarCorDeFundo(texto, AZUL_PRINCIPAL);
       });

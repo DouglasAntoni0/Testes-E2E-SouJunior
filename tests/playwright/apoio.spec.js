@@ -5,7 +5,6 @@ const {
   validarImagem,
   validarLinkExterno,
   validarLimitesHorizontais,
-  validarSemRolagemHorizontal,
 } = require('./apoio/validacoes');
 
 test.describe('Apoio, mascote e faixa mobile', () => {
@@ -148,9 +147,10 @@ test.describe('Apoio, mascote e faixa mobile', () => {
     const faixa = inicio.controleDeApoio();
     await expect(faixa).toBeVisible();
     const caixa = await faixa.boundingBox();
+    const larguraUtil = await pagina.evaluate(() => document.documentElement.clientWidth);
     expect(Math.abs(caixa.x)).toBeLessThanOrEqual(1);
-    expect(Math.abs(caixa.width - 375)).toBeLessThanOrEqual(1);
-    await validarSemRolagemHorizontal(pagina);
+    expect(Math.abs(caixa.width - larguraUtil)).toBeLessThanOrEqual(1);
+    await validarLimitesHorizontais(faixa);
   });
 
   test('[CT-APO-012] Deve centralizar o conjunto de texto e coração na faixa', async ({

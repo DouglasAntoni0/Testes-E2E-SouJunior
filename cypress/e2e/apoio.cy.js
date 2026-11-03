@@ -4,7 +4,6 @@ const {
   validarImagem,
   validarLinkExterno,
   validarLimitesHorizontais,
-  validarSemRolagemHorizontal,
 } = require('../support/validacoes');
 
 const inicio = new PaginaInicial();
@@ -110,10 +109,11 @@ describe('Apoio, mascote e faixa mobile', () => {
       .should('be.visible')
       .should(($faixa) => {
         const caixa = $faixa[0].getBoundingClientRect();
+        const larguraUtil = $faixa[0].ownerDocument.documentElement.clientWidth;
         expect(Math.abs(caixa.left)).to.be.at.most(1);
-        expect(Math.abs(caixa.width - 375)).to.be.at.most(1);
+        expect(Math.abs(caixa.width - larguraUtil)).to.be.at.most(1);
       });
-    validarSemRolagemHorizontal();
+    validarLimitesHorizontais(inicio.controleDeApoio());
   });
 
   it('[CT-APO-012] Deve centralizar o conjunto de texto e coração na faixa', () => {

@@ -37,7 +37,7 @@ describe('Identidade visual: paleta de cores', () => {
       });
 
       it('[CT-COR-005] Deve aplicar o azul principal aos painéis de depoimento', () => {
-        cy.get('#depoimentos [role="list"] > div > div:first-child p')
+        cy.get('#depoimentos article p')
           .should('have.length', 8)
           .each(($texto) => {
             validarCorDeFundo(cy.wrap($texto), AZUL_PRINCIPAL);

@@ -75,6 +75,7 @@ describe('Notícias e Eventos', () => {
 
   it('[CT-NOT-008] Deve navegar pelos quatro indicadores de eventos no mobile', () => {
     cy.viewport(375, 812);
+    inicio.abrir();
     cy.get('#noticias-eventos').scrollIntoView();
     cy.get('#noticias-eventos')
       .findAllByRole('button', { name: /^Ir para página/ })
@@ -92,6 +93,7 @@ describe('Notícias e Eventos', () => {
 
   it('[CT-NOT-009] Deve manter o conteúdo de um evento dentro da tela mobile', () => {
     cy.viewport(375, 812);
+    inicio.abrir();
     cy.get('#noticias-eventos').scrollIntoView();
     validarLimitesHorizontais(
       cy.get('#noticias-eventos').findByText(eventos[0].data, { exact: true }),
@@ -99,5 +101,15 @@ describe('Notícias e Eventos', () => {
     validarLimitesHorizontais(
       cy.get('#noticias-eventos').findAllByRole('button', { name: 'Confira', exact: true }).first(),
     );
+  });
+
+  it('[CT-NOT-010] Deve adaptar os indicadores ao mudar de desktop para mobile', () => {
+    cy.get('#noticias-eventos')
+      .findAllByRole('button', { name: /^Ir para página/ })
+      .should('have.length', 2);
+    cy.viewport(375, 812);
+    cy.get('#noticias-eventos')
+      .findAllByRole('button', { name: /^Ir para página/ })
+      .should('have.length', 4);
   });
 });

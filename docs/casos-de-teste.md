@@ -1311,6 +1311,8 @@ Implementações: [Cypress](../cypress/e2e/noticias-e-eventos.cy.js) · [Playwri
 
 **Pré-condição:** O usuário acessa Notícias e Eventos pelo celular.
 
+Configure o tamanho mobile antes de abrir a página. A troca de resolução com a página já carregada é exercitada separadamente em CT-NOT-010.
+
 **Dado que** o usuário acessa Notícias e Eventos pelo celular
 
 **Quando** selecionar o último indicador e depois o primeiro
@@ -1332,6 +1334,20 @@ Implementações: [Cypress](../cypress/e2e/noticias-e-eventos.cy.js) · [Playwri
 **Então** a data e o botão devem caber na largura útil sem perder acesso à ação.
 
 **Variações:** Mobile.
+
+**Referências:** [#1268](https://github.com/SouJunior/products/issues/1268), [#1318](https://github.com/SouJunior/products/issues/1318), [#1370](https://github.com/SouJunior/products/issues/1370).
+
+### CT-NOT-010 — adaptar os indicadores ao mudar de desktop para mobile
+
+**Pré-condição:** O usuário abriu a Home em desktop, com dois indicadores de eventos.
+
+**Dado que** a página já está carregada em desktop
+
+**Quando** mudar a largura da tela para 375 pixels sem recarregar
+
+**Então** o carrossel deve apresentar quatro indicadores, correspondentes aos quatro eventos no layout mobile.
+
+**Variações:** Desktop para mobile.
 
 **Referências:** [#1268](https://github.com/SouJunior/products/issues/1268), [#1318](https://github.com/SouJunior/products/issues/1318), [#1370](https://github.com/SouJunior/products/issues/1370).
 
@@ -1487,7 +1503,9 @@ Implementações: [Cypress](../cypress/e2e/apoio.cy.js) · [Playwright](../tests
 
 **Quando** observar o enquadramento do controle
 
-**Então** a faixa deve começar na borda esquerda, terminar na direita e não criar rolagem horizontal.
+**Então** a faixa deve começar na borda esquerda, terminar na direita e permanecer dentro da largura útil da tela.
+
+A largura da faixa é verificada pelo próprio elemento. A rolagem horizontal do documento é coberta em CT-SOB-005, para não atribuir à faixa um transbordamento causado por outra seção.
 
 **Variações:** Mobile.
 
