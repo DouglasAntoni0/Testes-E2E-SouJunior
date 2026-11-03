@@ -1,56 +1,28 @@
-describe('Seção: Nossas Iniciativas', () => {
+const { PaginaInicial } = require('../support/pages/PaginaInicial');
 
-  beforeEach(() => {
-    cy.visit('http://localhost:3000');
+const inicio = new PaginaInicial();
 
-    cy.get('#nossas-iniciativas').scrollIntoView().should('be.visible');
+describe('Iniciativas temporariamente ocultas', () => {
+  beforeEach(() => inicio.abrir());
+
+  it('[CT-INI-001] Deve ocultar a seção de iniciativas enquanto não há programas ativos', () => {
+    cy.get('#nossas-iniciativas').should('not.exist');
+    cy.findByRole('heading', { name: 'SouJunior Labs', exact: true }).should('not.exist');
+    cy.findByRole('heading', { name: 'SouJunior Talk', exact: true }).should('not.exist');
   });
 
-  it('Deve validar a integridade do card SouJunior Labs e o redirecionamento', () => {
-    cy.contains('h2', 'SouJunior Labs').parent().parent().within(() => {
-
-      cy.get('img[alt="SouJunior Labs"]')
-        .should('be.visible')
-        .and(($img) => {
-          expect($img[0].naturalWidth).to.be.greaterThan(0);
-        });
-
-      cy.get('h2').should('be.visible');
-      cy.get('p').should('contain', 'Coloque em prática suas expertises em projetos reais');
-
-      cy.window().then((win) => {
-        cy.stub(win, 'open').as('windowOpenLabs');
-      });
-
-      cy.get('button').contains('Acesse').click();
-
-      const targetUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd1IspO3Hwylce2kHtIsmyBAkH7p3VFmdYUmdL75YXZ-DSNBA/viewform';
-      cy.get('@windowOpenLabs').should('be.calledWith', targetUrl);
-    });
+  it('[CT-INI-002] Deve retirar o acesso às iniciativas do cabeçalho', () => {
+    inicio
+      .cabecalho()
+      .findByRole('menuitem', { name: /Nossas Iniciativas/i })
+      .should('not.exist');
   });
 
-  it('Deve validar a integridade do card SouJunior Talk e o redirecionamento', () => {
-    cy.contains('h2', 'SouJunior Talk').parent().parent().within(() => {
+  it('[CT-INI-003] Deve retirar o acesso às iniciativas do rodapé', () => {
+    inicio.rodape().findByText('Nossas iniciativas', { exact: true }).should('not.exist');
+  });
 
-      cy.get('img[alt="SouJunior Talk"]')
-        .should('be.visible')
-        .and(($img) => {
-          expect($img[0].naturalWidth).to.be.greaterThan(0);
-        });
-
-      cy.get('h2').should('be.visible');
-
-      const textDescricao = 'Se você está procurando uma maneira de aprimorar seu inglês com pessoas reais, temos uma excelente notícia para você!';
-      cy.get('p').should('have.text', textDescricao);
-
-      cy.window().then((win) => {
-        cy.stub(win, 'open').as('windowOpenTalk');
-      });
-
-      cy.get('button').contains('Acesse').click();
-
-      const linkDiscord = 'https://discord.com/invite/564CDre9F3';
-      cy.get('@windowOpenTalk').should('be.calledWith', linkDiscord);
-    });
+  it('[CT-INI-004] Deve evitar âncoras órfãs para iniciativas ocultas', () => {
+    cy.get('a[href$="#nossas-iniciativas"]').should('not.exist');
   });
 });
